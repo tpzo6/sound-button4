@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>زر بصورة وصوت</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #111;
+        }
+
+        .sound-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .sound-button img {
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sound-button img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- زر بصورة -->
+    <button class="sound-button" onclick="playSound()">
+        <img src="button.jpg" alt="زر صوت">
+    </button>
+
+    <!-- الصوت -->
+    <audio id="mySound">
+        <source src="https://www.soundjay.com/buttons/sounds/button-3.mp3" type="audio/mpeg">
+        المتصفح لا يدعم تشغيل الصوت.
+    </audio>
+
+    <script>
+        function playSound() {
+            document.getElementById("mySound").play();
+        }
+    </script>
+
+</body>
+</html>
+
